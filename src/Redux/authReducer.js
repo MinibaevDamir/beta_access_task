@@ -21,7 +21,6 @@ const authReducer = (state = initialState, action) => {
 export const setCode = () => ({type: SET_SECRET_CODE});
 export const login = (code) => (dispatch) => {
     authAPI.codeSend(code).then(response => {
-        console.log(response.data.resultCode)
         if(response.data.resultCode === 0) {
             dispatch(setCode())
         }

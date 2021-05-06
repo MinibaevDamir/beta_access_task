@@ -1,4 +1,3 @@
-import {connect} from 'react-redux';
 import React from "react";
 import {withRouter} from "react-router-dom";
 import SitePage from "../Components/sitePage";
