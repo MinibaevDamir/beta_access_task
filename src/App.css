@@ -20,7 +20,10 @@
 .App-link {
   color: #61dafb;
 }
-
+.error {
+  font-size: calc(6px + 1vmin);
+  color: crimson;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

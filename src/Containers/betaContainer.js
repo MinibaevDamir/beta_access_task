@@ -8,7 +8,7 @@ import BetaAccessPage from "../Components/betaPage";
 
 let mapStateToProps = (state) => (
      {
-        isAuth: state.auth.isAuth,
+         isAuth: state.auth.isAuth,
     });
 const BetaAccessContainer = compose(withRouter,
     connect(mapStateToProps, {login}))(BetaAccessPage);

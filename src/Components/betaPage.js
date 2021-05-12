@@ -7,7 +7,6 @@ import SecretReduxForm from "../Forms/codeForm";
 
 
 const BetaAccessPage = (props) => {
-    const history = useHistory();
     let onSubmit = (formData) => {
         props.login(formData.secretCode)
     }
@@ -21,6 +20,9 @@ const BetaAccessPage = (props) => {
                     <p>Site is not avaliable now. Coming soon.</p>
                     <p>Come back here in future!</p>
                     <SecretReduxForm onSubmit={onSubmit}/>
+                    <div className= "error">
+                    {!props.fetching && props.error}
+                    </div>
                 </div>
             </div>
         );
