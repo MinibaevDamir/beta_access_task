@@ -1,14 +1,15 @@
 import {connect} from 'react-redux';
-import React from "react";
 import {withRouter} from "react-router-dom";
 import {compose} from "redux";
-import {login, setCode} from "../Redux/authReducer";
 import BetaAccessPage from "../Components/betaPage";
+import {login} from "../Actions/authActions";
 
 
 let mapStateToProps = (state) => (
      {
          isAuth: state.auth.isAuth,
+         fetching: state.auth.fetching,
+         error: state.auth.error
     });
 const BetaAccessContainer = compose(withRouter,
     connect(mapStateToProps, {login}))(BetaAccessPage);
