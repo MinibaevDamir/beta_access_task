@@ -1,16 +1,15 @@
 const {Router} = require('express');
+const config = require('config');
 const router = Router();
+const tokens = config.get("tokens");
 router.post('/code', [], async(req, res) => {
     try{
         const {code} = req.body
-        if(code == "tokenval"){
+        if(tokens.includes(code)){
             res.status(200).json({message: "Token was authorizated", resultCode: 0});
         }
-        if(code.length < 3) {
-            res.status(400).json({message: "Minimal length of token: 3"})
-        }
         else {
-            res.status(401).json({message: "This token don't exist"});
+            res.status(401).json({message: "This token doesn't exist"});
         }
     }
     catch(e) {
