@@ -1,12 +1,10 @@
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import $ from 'jquery';
-import Popper from 'popper.js';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import store from "./Redux/store"
+import store from "./store"
 import {Provider} from "react-redux";
 import {BrowserRouter} from "react-router-dom";
 

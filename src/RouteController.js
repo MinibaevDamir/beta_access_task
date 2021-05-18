@@ -1,5 +1,4 @@
 import {Route} from "react-router-dom";
-import BetaAccessPage from "./Components/betaPage";
 import React from "react";
 import SiteContainer from "./Containers/siteContainer";
 import BetaAccessContainer from "./Containers/betaContainer";
