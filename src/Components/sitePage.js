@@ -1,13 +1,18 @@
 import '../App.css';
-import React from "react";
 
 const SitePage = (props) => {
+    let handleClick = () => {
+        props.logout()
+    }
     return (
-        <div className="App">
-            <div className="App-header">
-                <a>Welcome back again.</a>
+            <div className="App">
+                <button className="btn btn-outline-secondary button_site" onClick={handleClick}>
+                        Log out
+                </button>
+                <div className="App-header">
+                    Welcome back again.
+                </div>
             </div>
-        </div>
     );
 }
 
