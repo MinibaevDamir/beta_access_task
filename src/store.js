@@ -1,4 +1,4 @@
-import {applyMiddleware, combineReducers, createStore} from "redux";
+    import {applyMiddleware, combineReducers, createStore} from "redux";
 import {reducer as formReducer} from "redux-form";
 import authReducer from "./Reducers/authReducer";
 import thunkMiddleware from "redux-thunk";
